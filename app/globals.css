@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f4f7fb;
+  --foreground: #102038;
+  --card: rgba(255, 255, 255, 0.82);
+  --primary: #0f6cfd;
+  --secondary: #0fa38a;
+  --muted: #5f6f86;
+  --border: rgba(135, 156, 186, 0.28);
+  --success: #138a52;
+  --warning: #e49423;
+  --danger: #d64141;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(15, 108, 253, 0.14), transparent 28%),
+    radial-gradient(circle at right 18%, rgba(15, 163, 138, 0.12), transparent 24%),
+    linear-gradient(180deg, #f8fbff 0%, var(--bg) 42%, #eef4fb 100%);
+  color: var(--foreground);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--foreground);
+}
+
+section {
+  scroll-margin-top: 104px;
+}
+
+::selection {
+  background: rgba(15, 108, 253, 0.18);
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.7));
+  backdrop-filter: blur(16px);
+}
+
+.prose-medical p {
+  @apply leading-7 text-muted;
+}
+
+.prose-medical h2 {
+  @apply mb-4 mt-8 text-2xl font-semibold;
+}
+
+.prose-medical ul {
+  @apply list-disc space-y-2 pl-6;
+}
